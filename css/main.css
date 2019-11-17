@@ -1408,7 +1408,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #c9f687;
+  background: #5b03ff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2703,15 +2703,16 @@ embed {
   width: 300px;
 }
 .header {
-  background: url("https://cdn.yangbingdong.com/img/header/header_background.jpg");
+  background: url("/images/background/header.jpg");
 }
 .site-subtitle {
   font-size: 15px;
-  color: #fff;
+  color: #0c4842;
 }
 .site-title {
   font-size: 40px;
   font-weight: bold;
+  font-family: 'Comic Sans MS', sans-serif;
 }
 .brand {
   background: transparent;
@@ -2792,7 +2793,7 @@ blockquote {
 body {
   color: #444;
   font-size: 16px;
-  background: rgba(240,240,240,0.1);
+  background: url("/images/background/background-cover.jpg");
 }
 .posts-expand .post-title-link::before {
   background-image: linear-gradient(90deg, #a166ab 0%, #ef4e7b 25%, #f37055 50%, #ef4e7b 75%, #a166ab 100%);
@@ -2808,12 +2809,6 @@ h6 {
 .post-body h1 {
   border-left: 5px solid #657b83;
   padding-left: 10px;
-}
-#days {
-  display: block;
-  color: #fffa74;
-  font-size: 14px;
-  margin-top: 15px;
 }
 .highlight figcaption {
   margin: 0em;
