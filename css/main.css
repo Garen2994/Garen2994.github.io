@@ -1109,14 +1109,7 @@ pre .javascript .function {
   }
 }
 .header {
-  background: url("https://s2.ax1x.com/2019/11/18/M6MgeA.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  -webkit-background-size: cover;
-  -o-background-size: cover;
-  -moz-background-size: cover;
-  -ms-background-size: cover;
+  background: transparent;
 }
 .header-inner {
   margin: 0 auto;
@@ -1334,11 +1327,7 @@ pre .javascript .function {
   }
 }
 .sidebar {
-  background: url("<https://s2.ax1x.com/2019/11/18/M69fPI.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: 50% 50%;
-  background-size: cover;
+  background: transparent;
   -webkit-background-size: cover;
   -o-background-size: cover;
   -moz-background-size: cover;
@@ -1423,7 +1412,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #d0170e;
+  background: #a7aba3;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
