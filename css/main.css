@@ -1109,7 +1109,15 @@ pre .javascript .function {
   }
 }
 .header {
-  background: #fff;
+  background: url("https://s2.ax1x.com/2019/11/18/M6AaIe.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
 }
 .header-inner {
   margin: 0 auto;
@@ -1408,7 +1416,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #eca7fa;
+  background: #c3ffff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
