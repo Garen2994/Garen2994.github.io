@@ -84,21 +84,21 @@
     let time, hidden, visible, title = document.title;
     let favicon = document.querySelector('link[rel="icon"]');
     
-      hidden = ["/･ω･｀) Gee","U can run~"];
-      visible = ["ﾍ(･_| Oops","but never ESCAPE....garen's blog"];
+      hidden = '/･ω･｀) Gee,U can run~';
+      visible = 'ﾍ(･_| Oops,but never ESCAPE....garen's blog';
     
     let random = t => t[Math.floor(Math.random() * t.length)];
     const change = () => {
       if (document.hidden) {
         favicon.setAttribute('href', '/images/favicon/hidden.png');
         
-          document.title = random(hidden);
+          document.title = hidden;
         
         clearTimeout(time);
       } else {
         favicon.setAttribute('href', '/images/favicon/favicon.png');
         
-          document.title = random(visible);
+          document.title = visible;
         
         time = setTimeout(() => {
           document.title = title;
