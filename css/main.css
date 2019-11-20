@@ -1427,7 +1427,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #c2de1c;
+  background: #ff1dff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1646,7 +1646,7 @@ pre .javascript .function {
   font-size: 13px;
 }
 .footer {
-  font-size: 16px;
+  font-size: 14px;
   color: #999;
   font-family: 'Comic Sans MS', sans-serif;
 }
@@ -1657,12 +1657,10 @@ pre .javascript .function {
   text-align: center;
 }
 .with-love {
+  color: #ff0000;
   display: inline-block;
   margin: 0 5px;
-}
-.powered-by,
-.theme-info {
-  display: inline-block;
+  animation: iconAnimate 1.33s ease-in-out infinite;
 }
 .powered-by {
   margin-right: 10px;
@@ -2655,13 +2653,13 @@ body {
   background: transparent;
 }
 .menu {
-  margin-top: 20px;
+  margin-top: 22px;
   padding-left: 0;
   text-align: center;
   background: rgba(240,240,240,0.5);
   margin-left: auto;
   margin-right: auto;
-  width: 530px;
+  width: 580px;
   border-radius: initial;
   -webkit-box-shadow: 0 0 15px #005caf;
 }
@@ -2706,8 +2704,8 @@ a:hover {
   background: rgba(240,240,240,0.5);
 }
 .main-inner {
-  margin-top: 60px;
-  padding: 60px 60px 60px 60px;
+  margin-top: 12px;
+  padding: 20px 20px 20px 20px;
   background: #fff;
   opacity: 0.8;
   min-height: 500px;
