@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.garenhou.com/"/>
-  <updated>2019-11-13T07:09:52.971Z</updated>
+  <updated>2019-11-25T06:38:42.867Z</updated>
   <id>http://www.garenhou.com/</id>
   
   <author>
@@ -17,35 +17,15 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Garen&#39;s Blog</title>
-    <link href="http://www.garenhou.com/2019/Garen&#39;s%20Blog/"/>
-    <id>http://www.garenhou.com/2019/Garen&#39;s%20Blog/</id>
-    <published>2019-11-13T04:31:42.708Z</published>
-    <updated>2019-11-13T07:09:52.971Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;Preface&quot;&gt;&lt;a href=&quot;#Preface&quot; class=&quot;headerlink&quot; title=&quot;Preface&quot;&gt;&lt;/a&gt;Preface&lt;/h2&gt;&lt;p&gt;碼渣 | 音樂雜食者 | Brit-pop | 英語學習癮者 | Java | 算法&lt;/p&gt;
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>【数据结构与算法】链表及相关问题</title>
     <link href="http://www.garenhou.com/2019/Structure-and-Algorithm-Linkedlist/"/>
     <id>http://www.garenhou.com/2019/Structure-and-Algorithm-Linkedlist/</id>
     <published>2019-10-25T07:35:22.000Z</published>
-    <updated>2019-11-14T01:46:12.022Z</updated>
+    <updated>2019-11-25T06:38:42.867Z</updated>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;blockquote&gt;&lt;p&gt;&lt;strong&gt;链表&lt;/strong&gt;(Linked list)相关算法题在面试中很常见，本文将详细介绍链表相对复杂的操作，并用Java语言实现，其中包括：建立带环链表（区别于循环链表）、判断链表是否带环，求得环入口结点及环的长度；判断两个链表是否相交、求得交点；查找倒数第K个结点；反转链表。在LeetCode和剑指Offer中出现的链表问题，基本基于这几个操作。（反正我是一文搞懂啦~）其他简单的操作实现在文后链接中。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;学习目的&lt;/strong&gt;：掌握链表相关操作，熟练使用&lt;strong&gt;双指针法&lt;/strong&gt;(快慢指针法)&lt;/p&gt;&lt;/blockquote&gt;
+      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;blockquote&gt;&lt;p&gt;&lt;strong&gt;链表&lt;/strong&gt;(Linked list)相关算法题在面试中很常见，本文将详细介绍链表相对复杂的操作，并用Java语言实现，其中包括：建立带环链表（区别于循环链表）、判断链表是否带环，求得环入口结点及环的长度；判断两个链表是否相交、求得交点；查找倒数第K个结点；反转链表。在LeetCode和剑指Offer中出现的链表问题，基本基于这几个操作。（反正我是一文搞懂啦~）其他简单的操作实现在文后链接中。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;学习目的&lt;/strong&gt;：掌握链表相关操作，熟练使用&lt;strong&gt;双指针法&lt;/strong&gt;(快慢指针法)&lt;/p&gt;&lt;/blockquote&gt;&lt;img src=&quot;C:\Users\Administrator\Desktop\diagram-1574663693696.jpeg&quot; alt=&quot;链表 | 600x600&quot; style=&quot;zoom:200%&quot;&gt;
     
     </summary>
     
