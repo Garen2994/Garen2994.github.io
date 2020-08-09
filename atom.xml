@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.garenhou.com/"/>
-  <updated>2019-12-26T08:45:22.285Z</updated>
+  <updated>2020-08-09T02:46:06.900Z</updated>
   <id>http://www.garenhou.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MySQL知识点总结</title>
+    <link href="http://www.garenhou.com/2020/mysql-summary/"/>
+    <id>http://www.garenhou.com/2020/mysql-summary/</id>
+    <published>2020-03-09T02:33:07.000Z</published>
+    <updated>2020-08-09T02:46:06.900Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;MySQL学习后整理的基础知识会汇总，可随时查看，做复习用。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="数据库" scheme="http://www.garenhou.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+      <category term="MySQL" scheme="http://www.garenhou.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/"/>
+    
+    
+      <category term="MySQL" scheme="http://www.garenhou.com/tags/MySQL/"/>
+    
+      <category term="数据库" scheme="http://www.garenhou.com/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+      <category term="计算机基础知识" scheme="http://www.garenhou.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
+    
+  </entry>
   
   <entry>
     <title>【数据结构与算法】链表及相关问题</title>
