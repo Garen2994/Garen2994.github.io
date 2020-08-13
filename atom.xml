@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.garenhou.com/"/>
-  <updated>2020-08-09T02:46:06.900Z</updated>
+  <updated>2020-08-13T08:39:55.952Z</updated>
   <id>http://www.garenhou.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JVM之动态计算对象年龄的规则</title>
+    <link href="http://www.garenhou.com/2020/jvm-dynamic-age-algorithm%20/"/>
+    <id>http://www.garenhou.com/2020/jvm-dynamic-age-algorithm%20/</id>
+    <published>2020-08-13T07:45:11.000Z</published>
+    <updated>2020-08-13T08:39:55.952Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;在学习JVM的过程中，发现一些文章在讲Java堆中对象从新生代晋升到老年代的年龄阈值，也就是对象提升(Promotion)规则没有交代得很清楚，这里就再来理解一下&lt;strong&gt;动态对象年龄计算规则&lt;/strong&gt;。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Java虚拟机" scheme="http://www.garenhou.com/categories/Java%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
+    
+      <category term="垃圾回收" scheme="http://www.garenhou.com/categories/Java%E8%99%9A%E6%8B%9F%E6%9C%BA/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/"/>
+    
+    
+      <category term="JVM" scheme="http://www.garenhou.com/tags/JVM/"/>
+    
+      <category term="垃圾回收" scheme="http://www.garenhou.com/tags/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>MySQL知识点总结</title>
