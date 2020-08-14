@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.garenhou.com/"/>
-  <updated>2020-08-14T03:52:59.969Z</updated>
+  <updated>2020-08-13T09:09:04.810Z</updated>
   <id>http://www.garenhou.com/</id>
   
   <author>
@@ -15,21 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>jvm-gabbage-collector</title>
-    <link href="http://www.garenhou.com/2020/jvm-gabbage-collector/"/>
-    <id>http://www.garenhou.com/2020/jvm-gabbage-collector/</id>
-    <published>2020-08-14T03:52:59.000Z</published>
-    <updated>2020-08-14T03:52:59.969Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-    
-  </entry>
   
   <entry>
     <title>JVM之动态计算对象年龄的规则</title>
