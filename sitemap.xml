@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://www.garenhou.com/2020/mysql-summary/</loc>
+    <loc>http://www.garenhou.com/2020/jvm-dynamic-age-algorithm%20/</loc>
     
-    <lastmod>2020-08-14T12:28:29.363Z</lastmod>
+    <lastmod>2020-08-15T13:01:50.927Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.garenhou.com/2020/jvm-dynamic-age-algorithm%20/</loc>
+    <loc>http://www.garenhou.com/2020/jvm-tools-summary/</loc>
     
-    <lastmod>2020-08-13T09:09:04.810Z</lastmod>
+    <lastmod>2020-08-15T13:01:41.207Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.garenhou.com/2020/mysql-summary/</loc>
+    
+    <lastmod>2020-08-14T12:28:29.363Z</lastmod>
     
   </url>
   

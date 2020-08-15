@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.garenhou.com/"/>
-  <updated>2020-08-13T09:09:04.810Z</updated>
+  <updated>2020-08-15T13:01:41.207Z</updated>
   <id>http://www.garenhou.com/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>JVM之动态计算对象年龄的规则</title>
+    <title>JVM 之 JDK 监控和故障处理工具总结</title>
+    <link href="http://www.garenhou.com/2020/jvm-tools-summary/"/>
+    <id>http://www.garenhou.com/2020/jvm-tools-summary/</id>
+    <published>2020-03-27T16:23:59.000Z</published>
+    <updated>2020-08-15T13:01:41.207Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;在学习 JVM 的过程中，为了监控虚拟机性能和更好地调优，用到了很多的工具，包括了命令行工具、可视化工具等，在这里加以总结。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="JVM" scheme="http://www.garenhou.com/categories/JVM/"/>
+    
+    
+      <category term="JVM" scheme="http://www.garenhou.com/tags/JVM/"/>
+    
+      <category term="性能监控" scheme="http://www.garenhou.com/tags/%E6%80%A7%E8%83%BD%E7%9B%91%E6%8E%A7/"/>
+    
+      <category term="命令" scheme="http://www.garenhou.com/tags/%E5%91%BD%E4%BB%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JVM 之动态计算对象年龄的规则</title>
     <link href="http://www.garenhou.com/2020/jvm-dynamic-age-algorithm%20/"/>
     <id>http://www.garenhou.com/2020/jvm-dynamic-age-algorithm%20/</id>
     <published>2020-03-13T07:45:11.000Z</published>
-    <updated>2020-08-13T09:09:04.810Z</updated>
+    <updated>2020-08-15T13:01:50.927Z</updated>
     
     <summary type="html">
     
@@ -30,9 +55,7 @@
     </summary>
     
     
-      <category term="Java虚拟机" scheme="http://www.garenhou.com/categories/Java%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
-    
-      <category term="垃圾回收" scheme="http://www.garenhou.com/categories/Java%E8%99%9A%E6%8B%9F%E6%9C%BA/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/"/>
+      <category term="JVM" scheme="http://www.garenhou.com/categories/JVM/"/>
     
     
       <category term="JVM" scheme="http://www.garenhou.com/tags/JVM/"/>
