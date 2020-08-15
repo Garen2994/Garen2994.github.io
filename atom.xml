@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.garenhou.com/"/>
-  <updated>2020-08-15T13:01:41.207Z</updated>
+  <updated>2020-08-15T13:22:03.609Z</updated>
   <id>http://www.garenhou.com/</id>
   
   <author>
@@ -20,8 +20,8 @@
     <title>JVM 之 JDK 监控和故障处理工具总结</title>
     <link href="http://www.garenhou.com/2020/jvm-tools-summary/"/>
     <id>http://www.garenhou.com/2020/jvm-tools-summary/</id>
-    <published>2020-03-27T16:23:59.000Z</published>
-    <updated>2020-08-15T13:01:41.207Z</updated>
+    <published>2020-04-05T16:23:59.000Z</published>
+    <updated>2020-08-15T13:22:03.609Z</updated>
     
     <summary type="html">
     
@@ -46,11 +46,11 @@
     <link href="http://www.garenhou.com/2020/jvm-dynamic-age-algorithm%20/"/>
     <id>http://www.garenhou.com/2020/jvm-dynamic-age-algorithm%20/</id>
     <published>2020-03-13T07:45:11.000Z</published>
-    <updated>2020-08-15T13:01:50.927Z</updated>
+    <updated>2020-08-15T13:22:11.421Z</updated>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;在学习JVM的过程中，发现一些文章在讲Java堆中对象从新生代晋升到老年代的年龄阈值，也就是对象提升(Promotion)规则没有交代得很清楚，这里就再来理解一下&lt;strong&gt;动态对象年龄计算规则&lt;/strong&gt;。&lt;/p&gt;
+      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;在学习JVM的过程中，发现一些文章在讲Java堆中对象从新生代晋升到老年代的年龄阈值，也就是对象提升( Promotion )规则没有交代得很清楚，这里就再来理解一下&lt;strong&gt;动态对象年龄计算规则&lt;/strong&gt;。&lt;/p&gt;
     
     </summary>
     
