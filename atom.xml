@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.garenhou.com/"/>
-  <updated>2020-08-15T13:22:03.609Z</updated>
+  <updated>2020-08-16T05:51:25.886Z</updated>
   <id>http://www.garenhou.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JVM 之常用的参数配置指北</title>
+    <link href="http://www.garenhou.com/2020/jvm-opt-arguments/"/>
+    <id>http://www.garenhou.com/2020/jvm-opt-arguments/</id>
+    <published>2020-04-08T04:04:59.000Z</published>
+    <updated>2020-08-16T05:51:25.886Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;在本篇文章中，你将掌握最常用的 JVM 参数配置。比如下面提到了一些概念比如堆、GC等。&lt;/p&gt;&lt;h2 id=&quot;堆内存相关&quot;&gt;&lt;a href=&quot;#堆内存相关&quot; class=&quot;headerlink&quot; title=&quot;堆内存相关&quot;&gt;&lt;/a&gt;堆内存相关&lt;/h2&gt;&lt;blockquote&gt;&lt;p&gt;Java 虚拟机所管理的内存中最大的一块，Java 堆是所有线程共享的一块内存区域，在虚拟机启动时创建。&lt;strong&gt;此内存区域的唯一目的就是存放对象实例，几乎所有的对象实例以及数组都在这里分配内存。&lt;/strong&gt;&lt;/p&gt;&lt;/blockquote&gt;&lt;h3 id=&quot;显式指定堆内存–Xms和-Xmx&quot;&gt;&lt;a href=&quot;#显式指定堆内存–Xms和-Xmx&quot; class=&quot;headerlink&quot; title=&quot;显式指定堆内存–Xms和-Xmx&quot;&gt;&lt;/a&gt;显式指定堆内存&lt;code&gt;–Xms&lt;/code&gt;和&lt;code&gt;-Xmx&lt;/code&gt;&lt;/h3&gt;
+    
+    </summary>
+    
+    
+      <category term="JVM" scheme="http://www.garenhou.com/categories/JVM/"/>
+    
+    
+      <category term="JVM" scheme="http://www.garenhou.com/tags/JVM/"/>
+    
+      <category term="参数配置" scheme="http://www.garenhou.com/tags/%E5%8F%82%E6%95%B0%E9%85%8D%E7%BD%AE/"/>
+    
+  </entry>
   
   <entry>
     <title>JVM 之 JDK 监控和故障处理工具总结</title>
