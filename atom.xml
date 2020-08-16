@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.garenhou.com/"/>
-  <updated>2020-08-16T05:51:25.886Z</updated>
+  <updated>2020-08-16T12:45:18.818Z</updated>
   <id>http://www.garenhou.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>手动实现 Java NIO</title>
+    <link href="http://www.garenhou.com/2020/java-NIO-implement/"/>
+    <id>http://www.garenhou.com/2020/java-NIO-implement/</id>
+    <published>2020-04-11T10:01:09.000Z</published>
+    <updated>2020-08-16T12:45:18.818Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;NIO是一种同步非阻塞的I/O模型，在Java 1.4 中引入了 NIO 框架，对应 java.nio 包，提供了 Channel , Selector，Buffer等抽象。&lt;/p&gt;&lt;p&gt;NIO中的N可以理解为Non-blocking，不单纯是New。它支持面向缓冲的，基于通道的I/O操作方法。 NIO提供了与传统BIO模型中的 &lt;code&gt;Socket&lt;/code&gt; 和 &lt;code&gt;ServerSocket&lt;/code&gt; 相对应的 &lt;code&gt;SocketChannel&lt;/code&gt; 和 &lt;code&gt;ServerSocketChannel&lt;/code&gt; 两种不同的套接字通道实现,两种通道都支持阻塞和非阻塞两种模式。阻塞模式使用就像传统中的支持一样，比较简单，但是性能和可靠性都不好；非阻塞模式正好与之相反。对于低负载、低并发的应用程序，可以使用同步阻塞I/O来提升开发速率和更好的维护性；对于高负载、高并发的（网络）应用，应使用 NIO 的非阻塞模式来开发。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Java网络编程" scheme="http://www.garenhou.com/categories/Java%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="Java网络模型" scheme="http://www.garenhou.com/tags/Java%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9E%8B/"/>
+    
+      <category term="NIO" scheme="http://www.garenhou.com/tags/NIO/"/>
+    
+  </entry>
   
   <entry>
     <title>JVM 之常用的参数配置指北</title>
