@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.garenhou.com/"/>
-  <updated>2020-08-16T12:51:11.733Z</updated>
+  <updated>2020-08-19T03:19:15.413Z</updated>
   <id>http://www.garenhou.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>从源码分析 ConcurrentHashMap</title>
+    <link href="http://www.garenhou.com/2020/ConcurrentHashMap-sourceCode/"/>
+    <id>http://www.garenhou.com/2020/ConcurrentHashMap-sourceCode/</id>
+    <published>2020-04-17T04:06:28.000Z</published>
+    <updated>2020-08-19T03:19:15.413Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;ConcurrentHashMap&lt;/strong&gt; 作为线程安全的 HashMap ，它的使用频率是很高的，在 JDK1.7 及之前和J DK1.8 及之后的版本，它的的底层结构变化是很大的。那么 ConcurrentHashMap 的存储结构和实现原理分别是怎么样的呢？以下将从这两个版本的源码来理解。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="http://www.garenhou.com/categories/Java/"/>
+    
+      <category term="集合" scheme="http://www.garenhou.com/categories/Java/%E9%9B%86%E5%90%88/"/>
+    
+    
+      <category term="集合" scheme="http://www.garenhou.com/tags/%E9%9B%86%E5%90%88/"/>
+    
+      <category term="源码" scheme="http://www.garenhou.com/tags/%E6%BA%90%E7%A0%81/"/>
+    
+      <category term="Map" scheme="http://www.garenhou.com/tags/Map/"/>
+    
+  </entry>
   
   <entry>
     <title>手动实现 Java NIO</title>
