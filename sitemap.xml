@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.garenhou.com/2020/dynamic-programming/</loc>
+    
+    <lastmod>2020-09-16T10:26:19.826Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.garenhou.com/2020/dfs-and-bfs/</loc>
+    
+    <lastmod>2020-09-16T10:26:16.958Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.garenhou.com/2019/Structure-and-Algorithm-Linkedlist/</loc>
+    
+    <lastmod>2020-09-16T10:25:20.354Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.garenhou.com/2020/ConcurrentHashMap-sourceCode/</loc>
     
     <lastmod>2020-08-19T03:19:15.413Z</lastmod>
@@ -47,13 +68,6 @@
     <loc>http://www.garenhou.com/2020/mysql-summary/</loc>
     
     <lastmod>2020-08-14T12:28:29.363Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.garenhou.com/2019/Structure-and-Algorithm-Linkedlist/</loc>
-    
-    <lastmod>2019-12-26T08:45:22.285Z</lastmod>
     
   </url>
   
