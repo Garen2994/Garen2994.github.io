@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>兮 · 自由散漫</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&family=Long+Cang&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/common.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+  </head>
+  <body class="page-feed">
+    <svg width="0" height="0" style="position: absolute">
+      <defs>
+        <filter id="rough-l" x="-25%" y="-25%" width="150%" height="150%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="4" result="n" seed="3" />
+          <feDisplacementMap in="SourceGraphic" in2="n" scale="12" />
+        </filter>
+      </defs>
+    </svg>
+
+    <!-- 全屏电视雪花底噪 -->
+    <div class="feed-static">
+      <canvas data-noise data-tint="200,200,200" data-vignette="0.3"></canvas>
+    </div>
+
+    <a class="back-arrow" href="subindex.html" aria-label="返回">
+      <svg viewBox="0 0 44 32" fill="none" stroke="#f2f0ea" stroke-width="2.4" stroke-linecap="round">
+        <path d="M42 16 H6" />
+        <path d="M14 8 C10 11 7 13.5 4 16 C7 18.5 10 21 14 24" />
+      </svg>
+    </a>
+
+    <div class="app">
+      <!-- 出血排版的书法大标题 -->
+      <svg class="feed-title" viewBox="0 0 560 150">
+        <text
+          filter="url(#rough-l)"
+          x="0"
+          y="122"
+          font-size="128"
+          fill="#f2f0ea"
+          style="font-family: var(--font-brush)"
+        >
+          自由散漫
+        </text>
+      </svg>
+
+      <article class="post reveal">
+        <time>2026.4.1 23:50:00</time>
+        <figure class="ph ph-a">
+          <canvas class="grain-c" data-grain="60"></canvas>
+          <span class="ph-label">占 位 图 01</span>
+        </figure>
+        <p class="note">占位文案：这里放一句当天随手写的话，长短不限。</p>
+      </article>
+
+      <!-- 程序员手账 · 代码手稿 -->
+      <article class="post reveal">
+        <time>2026.3.25 01:12:00</time>
+        <figure class="manuscript">
+          <pre>Selector selector = Selector.open();
+server.configureBlocking(false);
+server.register(selector, OP_ACCEPT);
+<span class="del">while (server.accept() != null) {}</span>
+while (true) {
+  selector.select();  <span class="cmt">// 阻塞到有事件</span>
+  drain(selector.selectedKeys());
+}</pre>
+          <span class="anno anno-1">这里有坑</span>
+          <span class="anno anno-2">凌晨两点改的</span>
+        </figure>
+        <p class="note">翻旧硬盘翻出 2020 年手写 NIO 的稿子，批注还留着。</p>
+      </article>
+
+      <article class="post reveal">
+        <time>2026.3.19 14:15:00</time>
+        <figure class="ph ph-b">
+          <canvas class="grain-c" data-grain="60"></canvas>
+          <span class="ph-label">占 位 图 02</span>
+        </figure>
+        <p class="note">占位文案：图片可以换成竖版照片或一段循环视频。</p>
+      </article>
+
+      <!-- 程序员手账 · git 墨迹热力图 -->
+      <article class="post reveal">
+        <time>2026.2.28 22:41:00</time>
+        <figure class="inkmap" id="inkmap">
+          <div class="inkmap-cap">
+            <span>git log · 2025.07 – 2026.07</span>
+            <span id="inkmapCount"></span>
+          </div>
+        </figure>
+        <p class="note">一年的提交记录，泼出来是这样一摊。</p>
+      </article>
+
+      <article class="post reveal">
+        <time>2026.2.7 02:03:00</time>
+        <figure class="ph ph-c">
+          <canvas class="grain-c" data-grain="60"></canvas>
+          <span class="ph-label">占 位 图 03</span>
+        </figure>
+        <p class="note">占位文案：深夜发的东西可以配冷一点的影调。</p>
+      </article>
+
+      <!-- 程序员手账 · 终端帧 -->
+      <article class="post reveal">
+        <time>2026.1.30 03:27:00</time>
+        <figure class="term">
+          <div class="term-bar"><i></i><i></i><i></i></div>
+          <pre class="term-body" id="termBody"></pre>
+        </figure>
+        <p class="note">终端也算日常。删不掉的就先留着。</p>
+      </article>
+
+      <article class="post reveal">
+        <time>2026.1.21 18:40:00</time>
+        <figure class="ph ph-d">
+          <canvas class="grain-c" data-grain="60"></canvas>
+          <span class="ph-label">占 位 图 04</span>
+        </figure>
+        <p class="note">占位文案：也可以完全不配文字，只留时间戳。</p>
+      </article>
+
+      <article class="post reveal">
+        <time>2025.12.31 23:59:59</time>
+        <figure class="ph ph-e">
+          <canvas class="grain-c" data-grain="60"></canvas>
+          <span class="ph-label">占 位 图 05</span>
+        </figure>
+        <p class="note">占位文案：跨年这条可以放个彩蛋。</p>
+      </article>
+    </div>
+
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/feed.js"></script>
+  </body>
+</html>

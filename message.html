@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>兮 · 留个话</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&family=Long+Cang&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/common.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+  </head>
+  <body class="page-msg">
+    <svg width="0" height="0" style="position: absolute">
+      <defs>
+        <filter id="rough-l" x="-25%" y="-25%" width="150%" height="150%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="4" result="n" seed="3" />
+          <feDisplacementMap in="SourceGraphic" in2="n" scale="12" />
+        </filter>
+      </defs>
+    </svg>
+
+    <a class="back-arrow" href="subindex.html" aria-label="返回">
+      <svg viewBox="0 0 44 32" fill="none" stroke="#f2f0ea" stroke-width="2.4" stroke-linecap="round">
+        <path d="M42 16 H6" />
+        <path d="M14 8 C10 11 7 13.5 4 16 C7 18.5 10 21 14 24" />
+      </svg>
+    </a>
+
+    <div class="app">
+      <svg class="msg-title" viewBox="0 0 420 150">
+        <text
+          filter="url(#rough-l)"
+          x="8"
+          y="118"
+          font-size="120"
+          fill="#f2f0ea"
+          style="font-family: var(--font-brush)"
+        >
+          留个话
+        </text>
+      </svg>
+      <p class="msg-sub">墙 上 钉 着 来 过 的 人</p>
+
+      <div class="wall reveal" id="wall"></div>
+
+      <!-- 写条子 -->
+      <div class="write reveal">
+        <textarea id="noteText" maxlength="60" placeholder="写点什么，钉墙上……"></textarea>
+        <!-- 蜜罐：真人看不到，机器人会填。后端见到有值就假装成功、实际丢弃 -->
+        <input
+          id="noteSite"
+          name="website"
+          tabindex="-1"
+          autocomplete="off"
+          aria-hidden="true"
+          style="position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0"
+        />
+        <div class="write-row">
+          <input id="noteWho" maxlength="12" placeholder="落款（可不写）" />
+          <button id="notePin">钉上去</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/js/common.js"></script>
+    <script>
+      // 后端地址。留空 = 本地模式（预置纸条 + localStorage）
+      const API = "https://api.garenhou.com:8443";
+
+      const preset = [
+        { txt: "路过，墙不错。", who: "无名氏" },
+        { txt: "凌晨三点看到这里，睡了。", who: "夜游者", cls: "note-dark" },
+        { txt: "磁带架那页我听了三遍。", who: "" },
+        { txt: "别太自由散漫。", who: "老朋友", cls: "note-red" },
+        { txt: "占位纸条：真实留言接后端后替换。", who: "梦", cls: "note-dark" },
+      ];
+
+      const wall = document.getElementById("wall");
+      const KEY = "xi-notes";
+      const palette = ["", "note-dark", "note-red"];
+
+      function loadMine() {
+        try {
+          return JSON.parse(localStorage.getItem(KEY)) || [];
+        } catch {
+          return [];
+        }
+      }
+
+      function addNote(n) {
+        const div = document.createElement("div");
+        div.className = "note" + (n.cls ? " " + n.cls : "");
+        const txt = document.createElement("p");
+        txt.className = "txt";
+        txt.textContent = n.txt;
+        div.appendChild(txt);
+        const who = document.createElement("span");
+        who.className = "who";
+        who.textContent = n.who ? "—— " + n.who : "—— 佚名";
+        div.appendChild(who);
+        wall.appendChild(div);
+      }
+
+      async function init() {
+        if (API) {
+          try {
+            const list = await fetch(API + "/notes").then((r) => r.json());
+            // 颜色按 id 取模，刷新后每张纸条颜色不变
+            list.forEach((n) => addNote({ txt: n.txt, who: n.who, cls: palette[n.id % 3] }));
+            return;
+          } catch {
+            // 后端没应答，退回本地模式
+          }
+        }
+        preset.forEach(addNote);
+        loadMine().forEach(addNote);
+      }
+      init();
+
+      document.getElementById("notePin").addEventListener("click", async () => {
+        const text = document.getElementById("noteText").value.trim();
+        if (!text) return;
+        const who = document.getElementById("noteWho").value.trim();
+        const n = { txt: text, who, cls: palette[(Math.random() * 3) | 0] };
+
+        if (API) {
+          const btn = document.getElementById("notePin");
+          btn.disabled = true;
+          try {
+            const res = await fetch(API + "/notes", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                txt: text,
+                who,
+                website: document.getElementById("noteSite").value,
+              }),
+            });
+            const data = await res.json();
+            if (!data.ok) {
+              alert(data.msg || "没钉上，再试试");
+              return;
+            }
+            if (data.approved === false) {
+              alert("收到了，审核之后上墙");
+              document.getElementById("noteText").value = "";
+              document.getElementById("noteWho").value = "";
+              return;
+            }
+          } catch {
+            alert("后端没应答，稍后再试");
+            return;
+          } finally {
+            btn.disabled = false;
+          }
+        } else {
+          const mine = loadMine();
+          mine.push(n);
+          localStorage.setItem(KEY, JSON.stringify(mine));
+        }
+
+        addNote(n);
+        document.getElementById("noteText").value = "";
+        document.getElementById("noteWho").value = "";
+        wall.lastElementChild.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>兮 · 废带回收</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&family=Long+Cang&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/common.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+  </head>
+  <body class="page-music">
+    <a class="back-arrow" href="subindex.html" aria-label="返回">
+      <svg viewBox="0 0 44 32" fill="none" stroke="#f2f0ea" stroke-width="2.4" stroke-linecap="round">
+        <path d="M42 16 H6" />
+        <path d="M14 8 C10 11 7 13.5 4 16 C7 18.5 10 21 14 24" />
+      </svg>
+    </a>
+
+    <div class="app">
+      <!-- 上层架：三盒 VHS -->
+      <div class="shelf reveal">
+        <div class="shelf-items">
+          <div class="vhs lean-1" data-title="请你不要回头">
+            <span class="num">01</span>
+            <span class="vtitle">请你不要回头</span>
+            <span class="fmt">VHS</span>
+          </div>
+          <div class="vhs lean-2" data-title="大事">
+            <span class="num">02</span>
+            <span class="vtitle">大事</span>
+            <span class="fmt">VHS</span>
+          </div>
+          <div class="vhs" data-title="没什么好说的">
+            <span class="num">03</span>
+            <span class="vtitle">没什么好说的</span>
+            <span class="fmt">VHS</span>
+          </div>
+        </div>
+        <div class="shelf-board"></div>
+      </div>
+
+      <!-- 下层架：一排磁带书脊 -->
+      <div class="shelf reveal">
+        <div class="shelf-items">
+          <div class="spine spine-red spine-tall" data-title="intro">
+            <span class="stitle">intro</span>
+            <span class="sno">no.1</span>
+          </div>
+          <div class="spine spine-blue" data-title="日记 / 一">
+            <span class="stitle">日记 / 一</span>
+            <span class="sno">no.2</span>
+          </div>
+          <div class="spine" data-title="日记 / 二">
+            <span class="stitle">日记 / 二</span>
+            <span class="sno">no.3</span>
+          </div>
+          <div class="spine spine-short" data-title="日记 / 三">
+            <span class="stitle">日记 / 三</span>
+            <span class="sno">no.4</span>
+          </div>
+          <div class="spine" data-title="日记 / 四">
+            <span class="stitle">日记 / 四</span>
+            <span class="sno">no.5</span>
+          </div>
+          <div class="spine spine-tall" data-title="日记 / 五">
+            <span class="stitle">日记 / 五</span>
+            <span class="sno">no.6</span>
+          </div>
+          <div class="spine spine-red spine-short" data-title="日记 / 六">
+            <span class="stitle">日记 / 六</span>
+            <span class="sno">no.7</span>
+          </div>
+          <div class="spine" data-title="日记 / 七">
+            <span class="stitle">日记 / 七</span>
+            <span class="sno">no.8</span>
+          </div>
+          <div class="spine spine-paper" data-title="日记 / 八">
+            <span class="stitle">日记 / 八</span>
+            <span class="sno">no.9</span>
+          </div>
+          <div class="spine spine-short" data-title="outro">
+            <span class="stitle">outro</span>
+            <span class="sno">no.10</span>
+          </div>
+        </div>
+        <div class="shelf-board"></div>
+      </div>
+
+      <p class="music-hint">点 一 盘 带 子 听 听</p>
+    </div>
+
+    <!-- 播放器占位浮层 -->
+    <div class="player" id="player">
+      <div class="ptitle" id="playerTitle"></div>
+      <div class="pbar"></div>
+      <button class="pclose" id="playerClose">CLOSE</button>
+    </div>
+
+    <script src="assets/js/common.js"></script>
+    <script>
+      const player = document.getElementById("player");
+      const playerTitle = document.getElementById("playerTitle");
+      document.querySelectorAll("[data-title]").forEach((el) => {
+        el.addEventListener("click", () => {
+          playerTitle.textContent = el.dataset.title;
+          player.classList.add("open");
+        });
+      });
+      document.getElementById("playerClose").addEventListener("click", () => {
+        player.classList.remove("open");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,85 @@
+:root {
+  --bg: #000;
+  --ink: #f2f0ea;
+  --ink-dim: #9a9890;
+  --ink-faint: #55534d;
+  --accent: #b03a2e;
+  --font-brush: "Zhi Mang Xing", "STXingkai", "华文行楷", "STKaiti", "KaiTi", "楷体", cursive;
+  --font-hand: "Long Cang", "STKaiti", "KaiTi", "楷体", cursive;
+  --font-mono: "Courier New", Consolas, monospace;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-hand);
+  overflow-x: hidden;
+}
+
+/* 移动优先：桌面端居中一列，两侧留黑 */
+.app {
+  position: relative;
+  max-width: 430px;
+  min-height: 100dvh;
+  margin: 0 auto;
+}
+
+/* ---- 印章 logo ---- */
+.seal {
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.12));
+}
+
+/* ---- 进入动画 ---- */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 1.1s ease,
+    transform 1.1s ease;
+}
+
+.reveal.in {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---- 返回箭头（手绘感） ---- */
+.back-arrow {
+  position: fixed;
+  top: 18px;
+  left: 16px;
+  z-index: 50;
+  width: 44px;
+  height: 32px;
+  opacity: 0.85;
+}
+
+.back-arrow svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ---- 页脚备案占位 ---- */
+.icp {
+  position: fixed;
+  bottom: 8px;
+  left: 0;
+  right: 0;
+  z-index: 40;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  font-size: 11px;
+  color: var(--ink-faint);
+  font-family: var(--font-mono);
+  letter-spacing: 0.5px;
+}
+
+/* ---- 通用噪点覆盖层 ---- */
+.grain {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  opacity: 0.5;
+  mix-blend-mode: overlay;
+}

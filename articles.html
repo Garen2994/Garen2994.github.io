@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>兮 · 故纸堆</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&family=Long+Cang&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/common.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+  </head>
+  <body class="page-arch">
+    <svg width="0" height="0" style="position: absolute">
+      <defs>
+        <filter id="rough-l" x="-25%" y="-25%" width="150%" height="150%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="4" result="n" seed="3" />
+          <feDisplacementMap in="SourceGraphic" in2="n" scale="12" />
+        </filter>
+      </defs>
+    </svg>
+
+    <a class="back-arrow" href="subindex.html" aria-label="返回">
+      <svg viewBox="0 0 44 32" fill="none" stroke="#f2f0ea" stroke-width="2.4" stroke-linecap="round">
+        <path d="M42 16 H6" />
+        <path d="M14 8 C10 11 7 13.5 4 16 C7 18.5 10 21 14 24" />
+      </svg>
+    </a>
+
+    <div class="app">
+      <svg class="arch-title" viewBox="0 0 460 150">
+        <text
+          filter="url(#rough-l)"
+          x="6"
+          y="120"
+          font-size="118"
+          fill="#f2f0ea"
+          style="font-family: var(--font-brush)"
+        >
+          故纸堆
+        </text>
+      </svg>
+
+      <div class="shelf reveal">
+        <div class="shelf-items" id="shelf1"></div>
+        <div class="shelf-board"></div>
+      </div>
+
+      <div class="shelf reveal">
+        <div class="shelf-items" id="shelf2"></div>
+        <div class="shelf-board"></div>
+      </div>
+
+      <p class="arch-hint">抽 一 卷 看 看</p>
+    </div>
+
+    <!-- 档案卡浮层 -->
+    <div class="arch-card" id="archCard">
+      <div class="card">
+        <button class="cclose" id="cardClose">合上</button>
+        <span class="ctag" id="cardTag"></span>
+        <h2 id="cardTitle"></h2>
+        <p class="cdate" id="cardDate"></p>
+        <p class="cexcerpt" id="cardExcerpt"></p>
+        <a class="clink" href="#" id="cardLink">调阅原件 →</a>
+      </div>
+    </div>
+
+    <script src="assets/js/common.js"></script>
+    <script>
+      // 真实文章数据，来自博客 src/content/posts；link 之后换成上线后的文章 URL
+      const docs = [
+        { label: "链表问题", title: "链表及相关问题", date: "2019.10.25", tag: "算法", cls: "folder-pale lean-l", excerpt: "反转、成环、相交，链表的老三样。", link: "#" },
+        { label: "深搜广搜", title: "深度优先搜索和广度优先搜索", date: "2020.02.06", tag: "算法", cls: "folder-dark lean-s", excerpt: "递归下去，或者一层层扫过去。", link: "#" },
+        { label: "MySQL 总结", title: "MySQL 知识点总结", date: "2020.03.09", tag: "数据库", cls: "folder-tall", excerpt: "索引、事务、锁，一锅端的笔记。", link: "#" },
+        { label: "动态年龄", title: "JVM 之动态计算对象年龄的规则", date: "2020.03.13", tag: "JVM", cls: "folder-short", excerpt: "对象什么时候进老年代，不止看 15 岁。", link: "#" },
+        { label: "动态规划", title: "动态规划", date: "2020.03.28", tag: "算法", cls: "folder-red", excerpt: "把大问题拆成会做的小问题。", link: "#" },
+        { label: "JVM 监控", title: "JDK 监控和故障处理工具总结", date: "2020.04.06", tag: "JVM", cls: "folder-dark lean-l", excerpt: "jps、jstack、jmap，救火用的家伙。", link: "#" },
+        { label: "扩容机制", title: "从源码看 ArrayList 扩容机制", date: "2020.04.06", tag: "源码", cls: "folder-pale folder-short", excerpt: "1.5 倍扩容是怎么算出来的。", link: "#" },
+        { label: "JVM 参数", title: "JVM 之常用的参数配置指北", date: "2020.04.08", tag: "JVM", cls: "folder-tall lean-s", excerpt: "堆多大、栈多深，参数背后的取舍。", link: "#" },
+        { label: "手写 NIO", title: "手动实现 Java NIO", date: "2020.04.11", tag: "源码", cls: "folder-red folder-short", excerpt: "不用框架，从 Selector 开始搭。", link: "#" },
+        { label: "并发容器", title: "从源码分析 ConcurrentHashMap", date: "2020.04.17", tag: "源码", cls: "folder-pale", excerpt: "CAS 加分段锁，并发容器的心脏。", link: "#" },
+      ];
+
+      function folderHtml(d, i) {
+        return `
+          <div class="folder ${d.cls}" data-i="${i}">
+            <span class="fyear">'${d.date.slice(2, 4)}</span>
+            <span class="ftitle">${d.label}</span>
+            <span class="fyear" style="visibility:hidden">'00</span>
+          </div>`;
+      }
+
+      document.getElementById("shelf1").innerHTML = docs.slice(0, 5).map((d, i) => folderHtml(d, i)).join("");
+      document.getElementById("shelf2").innerHTML = docs.slice(5).map((d, i) => folderHtml(d, i + 5)).join("");
+
+      const card = document.getElementById("archCard");
+      document.querySelectorAll(".folder").forEach((el) => {
+        el.addEventListener("click", () => {
+          const d = docs[Number(el.dataset.i)];
+          document.getElementById("cardTag").textContent = "档案 · " + d.tag;
+          document.getElementById("cardTitle").textContent = d.title;
+          document.getElementById("cardDate").textContent = "归档于 " + d.date;
+          document.getElementById("cardExcerpt").textContent = d.excerpt;
+          document.getElementById("cardLink").href = d.link;
+          card.classList.add("open");
+        });
+      });
+      document.getElementById("cardClose").addEventListener("click", () => card.classList.remove("open"));
+      card.addEventListener("click", (e) => {
+        if (e.target === card) card.classList.remove("open");
+      });
+    </script>
+  </body>
+</html>

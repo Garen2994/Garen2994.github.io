@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>兮 · 目录</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&family=Long+Cang&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/common.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+  </head>
+  <body class="page-nav">
+    <svg width="0" height="0" style="position: absolute">
+      <defs>
+        <filter id="rough-s" x="-20%" y="-20%" width="140%" height="140%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.12" numOctaves="3" result="n" seed="7" />
+          <feDisplacementMap in="SourceGraphic" in2="n" scale="5" />
+        </filter>
+        <filter id="rough-l" x="-25%" y="-25%" width="150%" height="150%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="4" result="n" seed="3" />
+          <feDisplacementMap in="SourceGraphic" in2="n" scale="12" />
+        </filter>
+      </defs>
+    </svg>
+
+    <div class="app">
+      <!-- 顶部印章：梦 · 龙藏行书 -->
+      <svg class="seal nav-seal" viewBox="0 0 90 190">
+        <g filter="url(#rough-s)">
+          <ellipse cx="45" cy="95" rx="33" ry="82" fill="none" stroke="#f2f0ea" stroke-width="5" />
+          <text
+            x="45"
+            y="114"
+            font-size="56"
+            text-anchor="middle"
+            fill="#f2f0ea"
+            style="font-family: var(--font-hand)"
+          >
+            梦
+          </text>
+          <circle cx="14" cy="152" r="3" fill="#f2f0ea" />
+          <circle cx="74" cy="34" r="2.2" fill="#f2f0ea" />
+        </g>
+      </svg>
+
+      <!-- 第一节 → Feed -->
+      <section class="nav-sec sec-feed reveal" data-href="feed.html">
+        <div class="win">
+          <canvas data-noise data-tint="120,130,120" data-vignette="0.7"></canvas>
+        </div>
+        <svg class="brush" viewBox="0 0 110 420">
+          <g filter="url(#rough-l)" style="font-family: var(--font-brush)">
+            <text x="55" y="92" font-size="96" text-anchor="middle" fill="#f2f0ea">自</text>
+            <text x="55" y="196" font-size="96" text-anchor="middle" fill="#f2f0ea">由</text>
+            <text x="55" y="300" font-size="96" text-anchor="middle" fill="#f2f0ea">散</text>
+            <text x="55" y="404" font-size="96" text-anchor="middle" fill="#f2f0ea">漫</text>
+          </g>
+        </svg>
+      </section>
+
+      <!-- 第二节 → 音乐 -->
+      <section class="nav-sec sec-music reveal" data-href="music.html">
+        <div class="win">
+          <canvas data-noise data-tint="140,120,90" data-vignette="0.65"></canvas>
+        </div>
+        <svg class="brush brush-a" viewBox="0 0 240 130">
+          <text filter="url(#rough-l)" x="10" y="104" font-size="110" style="font-family: var(--font-brush)">
+            废带
+          </text>
+        </svg>
+        <svg class="brush brush-b" viewBox="0 0 240 130">
+          <text filter="url(#rough-l)" x="10" y="104" font-size="110" style="font-family: var(--font-brush)">
+            回收
+          </text>
+        </svg>
+      </section>
+
+      <!-- 第三节 → 留言 -->
+      <section class="nav-sec sec-msg reveal" data-href="message.html">
+        <div class="win">
+          <canvas data-noise data-tint="100,110,140" data-vignette="0.7"></canvas>
+        </div>
+        <svg class="brush" viewBox="0 0 420 150">
+          <text filter="url(#rough-l)" x="8" y="118" font-size="120" style="font-family: var(--font-brush)">
+            留个话
+          </text>
+        </svg>
+      </section>
+
+      <!-- 第四节 → 文章架 -->
+      <section class="nav-sec sec-arc reveal" data-href="articles.html">
+        <div class="win">
+          <canvas data-noise data-tint="150,130,95" data-vignette="0.7"></canvas>
+        </div>
+        <svg class="brush" viewBox="0 0 420 150">
+          <text filter="url(#rough-l)" x="8" y="118" font-size="120" style="font-family: var(--font-brush)">
+            故纸堆
+          </text>
+        </svg>
+      </section>
+
+      <footer class="icp">
+        <span>京ICP备00000000号（占位）</span>
+      </footer>
+    </div>
+
+    <script src="assets/js/common.js"></script>
+    <script>
+      document.querySelectorAll(".nav-sec").forEach((sec) => {
+        sec.addEventListener("click", () => (location.href = sec.dataset.href));
+      });
+    </script>
+  </body>
+</html>
